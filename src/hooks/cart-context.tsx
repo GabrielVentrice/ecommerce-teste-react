@@ -8,7 +8,7 @@ interface ICart {
 export const CartContext = React.createContext<ICart>({} as ICart)
 
 export const CartProvider: React.FC = ({ children }) => {
-  const [productsState, setProductsState] = useState()
+  const [productsState, setProductsState] = useState<number[]>()
 
   const getCount = () => {
     const products = localStorage.getItem('Cart:Products')
