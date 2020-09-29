@@ -25,7 +25,6 @@ import {
   FooterContainer,
   InputContainer
 } from './styles'
-import { request } from 'https'
 
 const Hero: React.FC = () => {
   return (

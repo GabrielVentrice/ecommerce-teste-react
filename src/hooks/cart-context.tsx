@@ -33,7 +33,7 @@ export const CartProvider: React.FC = ({ children }) => {
 
         setProductsState(productsArray)
 
-        localStorage.setItem('Cart:Products', JSON.stringify(productsArray))
+        localStorage.setItem('Cart:Products', JSON.stringify(productsState))
       }
     } else {
       let productsArray = []
@@ -42,7 +42,7 @@ export const CartProvider: React.FC = ({ children }) => {
 
       setProductsState(productsArray)
 
-      localStorage.setItem('Cart:Products', JSON.stringify(productsArray))
+      localStorage.setItem('Cart:Products', JSON.stringify(productsState))
     }
   }
 
