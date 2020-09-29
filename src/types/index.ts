@@ -1,3 +1,8 @@
+export interface IInstallments {
+  quantity: number
+  value: number
+}
+
 export interface IProduct {
   productId: number
   productName: string
@@ -5,4 +10,10 @@ export interface IProduct {
   imageUrl: string
   listPrice: number
   price: number
+  installments: IInstallments[]
+}
+
+export interface INewsLetter {
+  name: string
+  email: string
 }

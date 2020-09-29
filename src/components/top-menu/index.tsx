@@ -14,6 +14,7 @@ import {
   CartContainer,
   Flex
 } from './styles'
+import { useCart } from '../../hooks/cart-context'
 
 interface ISearchInput {
   className?: string
@@ -21,9 +22,14 @@ interface ISearchInput {
 }
 
 const Cart: React.FC = () => {
+  const { getCount } = useCart()
+
   return (
-    <CartContainer>
+    <CartContainer quantity={getCount()}>
       <img src={CartIcon} alt="Icone de carrinho"></img>
+      <div>
+        <p>{getCount()}</p>
+      </div>
     </CartContainer>
   )
 }

@@ -2,11 +2,10 @@ import { createGlobalStyle } from 'styled-components'
 import { device } from './constants'
 export const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
 
   body{
     font-family: 'Nunito', sans-serif;
-
-    
   }
 
   ::placeholder{
@@ -24,6 +23,46 @@ export const GlobalStyle = createGlobalStyle`
     color: #7A7A7A;
   }
 
+  input{
+    background: #FFFFFF;
+    border-radius: 5px;
+    padding: 16px;
+    border: none;
+    margin: 4px;
+  }
+
+  button{
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 14px;
+    
+    color: white;
+    border: none;
+    background: black;
+    margin: 4px;
+    border-radius: 5px;
+    
+    &.button-medium{
+      width: 100%;
+      height: 48px;
+
+      @media ${device.laptop}{
+        width: 140px;
+      }
+    }
+
+    &.button-large{
+      width: 100%;
+      height: 48px;
+
+      @media ${device.laptop}{
+        width: 328px;
+      }
+    }
+  }
+
   h1{
     font-size: 30px;
     font-weight: 900;
@@ -34,7 +73,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   h3{
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 700;
 
     @media ${device.laptop} {

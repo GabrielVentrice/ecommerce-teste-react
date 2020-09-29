@@ -56,6 +56,9 @@ export const InputContainer = styled.div`
   input {
     border: none;
     flex: 1;
+    padding: 0px;
+    border: none;
+    margin: 0px;
   }
 
   img {
@@ -83,7 +86,36 @@ export const AccountContainer = styled.div`
   }
 `
 
-export const CartContainer = styled.div``
+interface CartContainerProps {
+  quantity: number
+}
+
+export const CartContainer = styled.div<CartContainerProps>`
+  display: flex;
+  align-items: center;
+
+  div {
+    display: flex;
+    margin-left: 4px;
+    border-radius: 50px;
+    background: ${props => (props.quantity === 0 ? 'transparent' : '#f8475f')};
+
+    width: 14px;
+    height: 14px;
+
+    align-items: center;
+    justify-content: center;
+
+    p {
+      font-family: Nunito;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 10px;
+      line-height: 14px;
+      color: ${props => (props.quantity === 0 ? 'transparent' : '#fff')};
+    }
+  }
+`
 
 export const Flex = styled.div`
   display: flex;
